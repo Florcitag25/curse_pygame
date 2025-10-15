@@ -28,6 +28,7 @@ for i in range (11):
     animation.append(img)
 
 weapon_image = pygame.image.load(constants.PATH_WEAPON)
+weapon_image = pygame.transform.scale(weapon_image,(constants.SCALE_WEAPON,constants.SCALE_WEAPON))
 
 #Call the Character class to make an instance, with its initial position and list
 character = Character(50,50,animation)

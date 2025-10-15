@@ -16,7 +16,7 @@ class Character:
     def draw_character(self,interface):
         image_flip = pygame.transform.flip(self.image,flip_x=self.flip,flip_y=False)
         interface.blit(image_flip,self.shape)
-        pygame.draw.rect(interface,constants.CHARACTER_COLOR, self.shape)
+        #pygame.draw.rect(interface,constants.CHARACTER_COLOR, self.shape,width=1)
 
     def move_character(self, delta_x, delta_y):
         if delta_x < 0:
