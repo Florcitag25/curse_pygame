@@ -38,4 +38,4 @@ class Weapon():
         self.angle = math.degrees(math.atan2(diff_y,diff_x))
         print(self.angle)
 
-        
+

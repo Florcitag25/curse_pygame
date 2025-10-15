@@ -18,6 +18,8 @@ PATH_IMAGE = "assets\images\characters\player\FA_TEDDY_Walk_"
 
 PATH_WEAPON = "assets\images\weapons\weapon_1.png"
 
+PATH_BULLET = "assets\images\weapons\bullet.png"
+
 SCALE_CHARACTER = 60
 
 SCALE_WEAPON = SCALE_CHARACTER/2

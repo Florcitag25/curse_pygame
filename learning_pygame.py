@@ -30,6 +30,8 @@ for i in range (11):
 weapon_image = pygame.image.load(constants.PATH_WEAPON)
 weapon_image = pygame.transform.scale(weapon_image,(constants.SCALE_WEAPON,constants.SCALE_WEAPON))
 
+bullet_image = pygame.image.load(constants.PATH_BULLET)
+
 #Call the Character class to make an instance, with its initial position and list
 character = Character(50,50,animation)
 
