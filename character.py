@@ -10,13 +10,13 @@ class Character:
         self.frame_index = 0
         self.update_time= pygame.time.get_ticks()
         self.image = self.animation[self.frame_index]
-        self.shape = pygame.Rect(0,0,constants.CHARACTER_WIDTH,constants.CHARACTER_HEIGHT)
+        self.shape = self.image.get_rect()
         self.shape.center = (x,y)
 
     def draw_character(self,interface):
         image_flip = pygame.transform.flip(self.image,flip_x=self.flip,flip_y=False)
         interface.blit(image_flip,self.shape)
-        #pygame.draw.rect(interface,constants.CHARACTER_COLOR, self.shape)
+        pygame.draw.rect(interface,constants.CHARACTER_COLOR, self.shape)
 
     def move_character(self, delta_x, delta_y):
         if delta_x < 0:
