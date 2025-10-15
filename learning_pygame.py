@@ -3,6 +3,7 @@ import constants
 import pygame
 import sys
 from character import Character
+from weapons import Weapon
 
 #Start pygame 
 pygame.init()
@@ -26,8 +27,12 @@ for i in range (11):
     img = pygame.transform.smoothscale(img,(constants.SCALE_CHARACTER,constants.SCALE_CHARACTER))
     animation.append(img)
 
+weapon_image = pygame.image.load(constants.PATH_WEAPON)
+
 #Call the Character class to make an instance, with its initial position and list
 character = Character(50,50,animation)
+
+weapon = Weapon(weapon_image)
 
 #Initialize booleans to move the character
 move_up = False
@@ -69,8 +74,13 @@ while True:
     #Call the Character update method to animate character
     character.update()
 
+    weapon.update_weapon(character)
+
     #Call the Character draw method to draw the character and flip it horizontally if it moves to the left
     character.draw_character(window)
+
+    weapon.draw_weapon(window)
+
 
     #Check the events, mainly if the user presses a key
     for event in pygame.event.get():

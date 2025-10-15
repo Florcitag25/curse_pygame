@@ -16,4 +16,6 @@ MOVEMENT = 5
 
 PATH_IMAGE = "assets\images\characters\player\FA_TEDDY_Walk_"
 
+PATH_WEAPON = "assets\images\weapons\weapon_1.png"
+
 SCALE_CHARACTER = 54
